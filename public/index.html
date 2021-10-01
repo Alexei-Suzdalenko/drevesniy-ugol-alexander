@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <script>String.prototype.capitalize = function() { return this.charAt(0).toUpperCase() + this.slice(1); }</script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://drevesniy-ugol.web.app">
+    <link rel="alternate" href="https://drevesniy-ugol.web.app" hreflang="x-default">
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon16.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <meta name="description" content="ДРЕВЕСНЫЙ УГОЛЬ">
+    <meta name="author" content="Google Pages">
+
+   	<meta property="og:site_name" content="ДРЕВЕСНЫЙ УГОЛЬ" /> 
+   	<meta property="og:site" content="ДРЕВЕСНЫЙ УГОЛЬ" /> 
+   	<meta property="og:title" content="ДРЕВЕСНЫЙ УГОЛЬ"/> 
+   	<meta property="og:description" content="ДРЕВЕСНЫЙ УГОЛЬ" /> 
+   	<meta property="og:image" content="/img/camion.png" /> 
+   	<meta property="og:url" content="https://drevesniy-ugol.web.app" /> 
+   	<meta name="twitter:card" content="summary_large_image"> 
+    <title>ДРЕВЕСНЫЙ УГОЛЬ</title>
+  
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css" rel="stylesheet">
+    <link href="/css/swiper.css" rel="stylesheet">
+  	<link href="/css/styles.css" rel="stylesheet">
+    <link href="/css/style-alexei.css" rel="stylesheet">
+  </head>
+  <body id="body_id" >
+    <div id="app"></div>
+    <script defer src="/js/menu.js"></script>
+    
+    <div id="chemaData"></div>
+    <script>
+    if ('serviceWorker' in navigator) { 
+       window.addEventListener('load', function() { 
+          navigator.serviceWorker.register('/sw2.js');
+       });
+      } else {alert ('dont have service worker');}
+    </script>
+  </body>
+</html>
+
