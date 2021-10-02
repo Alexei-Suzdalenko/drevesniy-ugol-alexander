@@ -23,7 +23,7 @@ Table Of Contents:
 /*****************************************
 Colors:
 - Backgrounds - light gray #fcfafb
-- Buttons, icons - blue #0092ff
+- Buttons, icons - blue #ff0505
 - Buttons, icons - red #ef473d
 - Headings text - black #223150
 - Body text - dark gray #5e6576
@@ -145,7 +145,7 @@ a:hover {
 }
 
 .blue {
-	color: #0092ff;
+	color: #ff0505;
 }
 
 .bg-gray {
@@ -162,9 +162,9 @@ a:hover {
 .btn-solid-reg {
 	display: inline-block;
 	padding: 1.375rem 2.25rem 1.375rem 2.25rem;
-	border: 1px solid #0092ff;
+	border: 1px solid #ff0505;
 	border-radius: 30px;
-	background-color: #0092ff;
+	background-color: #ff0505;
 	color: #ffffff;
 	font-weight: 600;
 	font-size: 0.875rem;
@@ -175,16 +175,16 @@ a:hover {
 
 .btn-solid-reg:hover {
 	background-color: transparent;
-	color: #0092ff; /* needs to stay here because of the color property of a tag */
+	color: #ff0505; /* needs to stay here because of the color property of a tag */
 	text-decoration: none;
 }
 
 .btn-solid-lg {
 	display: inline-block;
 	padding: 1.625rem 2.625rem 1.625rem 2.625rem;
-	border: 1px solid #0092ff;
+	border: 1px solid #ff0505;
 	border-radius: 30px;
-	background-color: #0092ff;
+	background-color: #ff0505;
 	color: #ffffff;
 	font-weight: 600;
 	font-size: 0.875rem;
@@ -195,16 +195,16 @@ a:hover {
 
 .btn-solid-lg:hover {
 	background-color: transparent;
-	color: #0092ff; /* needs to stay here because of the color property of a tag */
+	color: #ff0505; /* needs to stay here because of the color property of a tag */
 	text-decoration: none;
 }
 
 .btn-solid-sm {
 	display: inline-block;
 	padding: 1rem 1.5rem 1rem 1.5rem;
-	border: 1px solid #0092ff;
+	border: 1px solid #ff0505;
 	border-radius: 30px;
-	background-color: #0092ff;
+	background-color: #ff0505;
 	color: #ffffff;
 	font-weight: 600;
 	font-size: 0.875rem;
@@ -215,7 +215,7 @@ a:hover {
 
 .btn-solid-sm:hover {
 	background-color: transparent;
-	color: #0092ff; /* needs to stay here because of the color property of a tag */
+	color: #ff0505; /* needs to stay here because of the color property of a tag */
 	text-decoration: none;
 }
 
@@ -318,9 +318,9 @@ a:hover {
 	display: inline-block;
 	width: 100%;
 	height: 3.25rem;
-	border: 1px solid #0092ff;
+	border: 1px solid #ff0505;
 	border-radius: 30px;
-	background-color: #0092ff;
+	background-color: #ff0505;
 	color: #ffffff;
 	font-weight: 600;
 	font-size: 0.875rem;
@@ -330,9 +330,9 @@ a:hover {
 }
 
 .form-control-submit-button:hover {
-	border: 1px solid #0092ff;
+	border: 1px solid #ff0505;
 	background-color: transparent;
-	color: #0092ff;
+	color: #ff0505;
 }
 
 
@@ -403,7 +403,7 @@ a:hover {
 .navbar .nav-item.dropdown.show .nav-link,
 .navbar .nav-item .nav-link:hover,
 .navbar .nav-item .nav-link.active {
-	color: #0092ff;
+	color: #ff0505;
 }
 
 /* Dropdown Menu */
@@ -440,7 +440,7 @@ a:hover {
 
 .navbar .dropdown-item:hover {
 	background-color: #fcfafb;
-	color: #0092ff;
+	color: #ff0505;
 }
 
 .navbar .dropdown-divider {
@@ -512,7 +512,7 @@ a:hover {
 
 .cards-1 .card-icon .fas,
 .cards-1 .card-icon .far {
-	color: #0092ff;
+	color: #ff0505;
 	font-size: 2rem;
 	line-height: 66px;
 }
@@ -751,11 +751,11 @@ a:hover {
 }
 
 .cards-2 .card .gradient-floor.red-to-blue {
-	background: linear-gradient(to right, #ef3d91, #0092ff);
+	background: linear-gradient(to right, #ef3d91, #ff0505);
 }
 
 .cards-2 .card .gradient-floor.blue-to-purple {
-	background: linear-gradient(to right, #0092ff, #637eff);
+	background: linear-gradient(to right, #ff0505, #637eff);
 }
 
 .cards-2 .card .gradient-floor.purple-to-green {
@@ -894,7 +894,7 @@ a:hover {
 }
 
 .footer .fa-stack .fa-stack-1x {
-    color: #0092ff;
+    color: #ff0505;
 	transition: all 0.2s ease;
 }
 
@@ -908,7 +908,7 @@ a:hover {
 }
 
 .footer .fa-stack:hover .fa-stack-2x {
-    color: #0092ff;
+    color: #ff0505;
 }
 
 
@@ -993,7 +993,7 @@ a:hover {
 }
 
 .ex-cards-1 .card .fa-stack-2x {
-	color: #0092ff;
+	color: #ff0505;
 }
 
 .ex-cards-1 .card .fa-stack-1x {

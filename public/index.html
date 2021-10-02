@@ -13,6 +13,7 @@
     <link rel="shortcut icon" href="/favicon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon16.png">
     <meta name="theme-color" content="#ffffff">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     <meta name="description" content="ДРЕВЕСНЫЙ УГОЛЬ">
     <meta name="author" content="Google Pages">
@@ -43,7 +44,9 @@
        window.addEventListener('load', function() { 
           navigator.serviceWorker.register('/sw2.js');
        });
-      } else {alert ('dont have service worker');}
+      } else {
+        // alert ('dont have service worker');
+      }
     </script>
   </body>
 </html>

@@ -20,7 +20,7 @@ self.addEventListener('fetch', function(event) { // console.log( event.request )
         .then(function(response) {
           // Cache hit - return response
           if (response) {
-                console.log(response);
+               // console.log(response);
                 return response;
           }
           return fetch(event.request);

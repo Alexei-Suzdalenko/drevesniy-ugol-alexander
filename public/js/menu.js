@@ -14,14 +14,7 @@ let body_id = document.getElementById('body_id');
 function initMap() {  
       let cityCurrent = window.location.href;
       let cityCurr = cityCurrent.split('/');
-      let cuidad = cityCurr[cityCurr.length-1].replace('-', ' ').replace('-', ' ').replace('-', ' ').replace('-', ' ').replace('-', ' ');
-      let tiposDeTrabajos = [ 'Mudanzas', 'Vaciados de pisos', 'Reformas', 'Pintura', 'Recogida muebles', 'Limpiezas' ].toString();
-      let currentWork = cityCurr[cityCurr.length-2].replace('-', ' ').replace('-', ' ');
-
-      if(tiposDeTrabajos.includes(currentWork) ){ alert('init map 2'); ;}
-      else {
-        return;
-      }      
+      let cuidad = cityCurr[cityCurr.length-1].replace('-', ' ').replace('-', ' ').replace('-', ' ').replace('-', ' ').replace('-', ' ');    
      
       let address = 'Россия ' + cuidad;
 
@@ -30,7 +23,7 @@ function initMap() {
          
             window.mudanzas_reto = results[0].place_id;
 
-            alert(results[0].place_id);
+           //  alert(results[0].place_id);
             
             window.test.getListReferencesFotosFromPlaceId(results[0].place_id);
            

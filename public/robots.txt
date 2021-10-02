@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /readme
-Host: mudanzasreto.com
-Sitemap: https://mudanzasreto.com/sitemap.xml
+Host: drevesniy-ugol.web.app
+Sitemap: https://drevesniy-ugol.web.app/sitemap.xml

@@ -5,9 +5,9 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="text-container">
-                        <h2>Servicio atención al cliente</h2>
-                        <p class="p-large">En Mudanzas Reto estamos a tu plena disposición con cualquier tipo de pregunta duda o sugerencia, no dudes en escribirnos o llamarnos. <br> Trabajamos para ti</p>
-                        <a class="btn-solid-lg" href="https://api.whatsapp.com/send?phone=+34643449721&text=Hola"><i class="fab fa-whatsapp"> 643 449 721</i></a>
+                        <h2>Служба поддержки клиентов</h2>
+                        <p class="p-large">Мы в вашем распоряжении с любым вопросом, сомнением или предложением, не стесняйтесь писать или звонить нам. <br> Мы работаем для вас</p>
+                        <a class="btn-solid-lg" href="https://api.whatsapp.com/send?phone=+79191934593"><i class="fab fa-whatsapp"> 7 919 193 45 93</i></a>
                     </div> 
                 </div>
             </div> 
@@ -15,12 +15,12 @@
     </div> 
     
     <div class="footer bg-gray">
-        <img class="decoration-circles" src="/images/decoration-circles.png" alt="Centro Mudanzas Reto">
+        <img class="decoration-circles" src="/images/decoration-circles.png" alt="Древесный Уголь">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h4>Síguenos en redes sociales</h4>
-                    <p>Disponible próximamente</p>
+                    <h4>Следите за нами в социальных сетях</h4>
+                    <p>Скоро</p>
                     <div class="social-container">
                         <span class="fa-stack">
                             <a href="https://play.google.com/store/apps/dev?id=8185819019973346070" target="_blank">
@@ -62,8 +62,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12" style="text-align: center;">
-                        <div v-for="(city, index) in listCitiesAndWorks" v-bind:key="index" v-bind:to="'/Mudanzas/' + deleteEmptySpaces(city)" class="div_links">
-                            <a class="cities_list" v-bind:href="'/Mudanzas/' + deleteEmptySpaces(city)">{{ city }}</a> 
+                        <div v-for="(city, index) in listCitiesAndWorks" v-bind:key="index" v-bind:to="'/buy/' + city.key" class="div_links">
+                            <a class="cities_list" v-bind:href="'/buy/' + city.key">{{ deleteEmptySpaces(city.name) }}</a> 
                         </div>
                 </div> 
             </div> 
@@ -72,12 +72,12 @@
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-sm-12">
                     <ul class="list-unstyled li-space-lg p-small">
-                        <li><img src="/images/mudanzas-reto.png" alt="Centro Mudanzas Reto" class="image_footer" /><a href="#">Aviso legal y politica de privacidad</a></li>
-                        <li><a href="/">Visitas {{ views }}</a></li>
+                        <li><a target="_blank" href="/user-agreement">Пользовательское соглашение, контакты и реквизиты</a></li>
+                        <li><a target="_blank" href="https://play.google.com/store/apps/dev?id=8185819019973346070">Разработка Алексей С</a></li>
                     </ul>
                 </div> 
                 <div class="col-lg-6 col-md-12 col-sm-12">
-                    <p class="p-small statement"><a href="/sitemap.xml" target="_blank">Copyright © Mudanzas Reto</a></p>
+                    <p class="p-small statement"><a href="/sitemap.xml" target="_blank">Copyright © Древесный Уголь</a></p>
                 </div> 
             </div>
         </div>  
@@ -86,11 +86,10 @@
 <script>
 import ldjson from '@/components/IndexPage/LDJson';
 import storageCitiesWorks from '@/storage/cities';
-import app from "firebase/app";
 export default{
     data(){
         return{
-            listCitiesAndWorks: [], views: 'Cargando...'
+            listCitiesAndWorks: []
         }
     },
     components: { ldjson },
@@ -102,13 +101,12 @@ export default{
        if(window.location.pathname == '/') {
           arrayCitiesEmpty = storageCitiesWorks.citiesSort
        } else {
-           arrayCitiesEmpty = storageCitiesWorks.cities
+           arrayCitiesEmpty = storageCitiesWorks.cities.reverse();
        };
        for (let city of arrayCitiesEmpty) {
            arrayPrepare.push(city)
        };
        this.listCitiesAndWorks = arrayPrepare; 
-       this.pushNewViewUser();
     },
     methods: {
        // currentId(){ alert('call map api =>' + this.$route.params.workDetail)
@@ -116,7 +114,7 @@ export default{
        //   return this.$route.params.workDetail;
        // },
         deleteEmptySpaces(x){
-            return x.replace(' ', '-').replace(' ', '-').replace(' ', '-').replace(' ', '-').replace(' ', '-').replace(' ', '-');
+            return x.replace(' ', '-').replace(' ', '-').replace(' ', '-').replace(' ', '-');
         },
         insertScriptGooglePages(){
             var scriptMap = document.createElement('script');
@@ -137,7 +135,7 @@ export default{
             
             let cityCurrent = window.location.href;
             let cityCurr = cityCurrent.split('/');
-            let tiposDeTrabajos = [ 'Mudanzas', 'Vaciados de pisos', 'Reformas', 'Pintura', 'Recogida muebles', 'Limpiezas' ].toString();
+            let tiposDeTrabajos = [ 'buy' ].toString();
             let currentWork = cityCurr[cityCurr.length-2].replace('-', ' ').replace('-', ' ');
             
             if(tiposDeTrabajos.includes(currentWork) ){
@@ -146,23 +144,6 @@ export default{
            
             }
             window.scrollTo(0, 0);
-        }, 
-        pushNewViewUser(){ 
-            let thisContextApp = this;
-
-            app.database().ref('all_views/' + new Date().getTime().toString()).set(window.location.pathname);
-
-            app.database().ref('unique_id').get().then((snapshot) => {
-                    if (snapshot.exists()) {
-                      let numberOfUsers = snapshot.val();
-                      thisContextApp.views = numberOfUsers;
-                      ++numberOfUsers;
-                      if( window.localStorage.getItem('user') != 'user' ){
-                           app.database().ref('unique_id').set(numberOfUsers);
-                           window.localStorage.setItem('user', 'user'); 
-                      }
-                    } 
-            });  
         }
     }
 }

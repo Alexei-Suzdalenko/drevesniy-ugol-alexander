@@ -12,7 +12,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <img class="img-fluid mt-5 mb-3" v-bind:src="images[0]" v-bind:alt="title" />
+          <img class="img-fluid mt-5 mb-3" v-bind:src="images[0]" v-bind:alt="title"/>
         </div>
       </div>
     </div>
@@ -35,19 +35,20 @@
           <p>
             {{ desc2 }}
           </p><br><br><br>
-          <img class="img-fluid mb-5" v-bind:src="images[1]" v-bind:alt="title"/>
+          <img class="img-fluid mb-5" v-bind:src="images[1]" v-bind:alt="title" v-if="images[1]" />
+          <img class="img-fluid mb-5" v-bind:src="images[2]" v-bind:alt="title" v-if="images[2]" />
+          <img class="img-fluid mb-5" v-bind:src="images[3]" v-bind:alt="title" v-if="images[3]" />
+          <img class="img-fluid mb-5" v-bind:src="images[4]" v-bind:alt="title" v-if="images[4]" />
         </div>
       </div>
     </div>
   </div>
-  <BottomInfoMenuWorkPages />
 </template>
 
 <script>
 import infoPages from '@/storage/list_work_detail';
-import BottomInfoMenuWorkPages from '@/components/MenuWorkDetail/BottomInfoMenuWorkPages';
 export default {
-  components: { BottomInfoMenuWorkPages },
+  components: { },
   data() {
     return {
         title: '', desc1: '', desc2: '', images: []
@@ -56,13 +57,13 @@ export default {
   created() {},
   methods: { 
       currentId(){
-          this.thatIsPageRoute(this.$route.params.workDetail);
-          return this.$route.params.workDetail;
+          this.thatIsPageRoute(this.$route.params.ugol);
+          return this.$route.params.ugol;
       },
-      thatIsPageRoute(currentId){
+      thatIsPageRoute(currentId){              
           let objInfo = 'none';
-          switch(currentId){
-              case infoPages.listWorkDetail[0] : objInfo = infoPages.infoPages[0] ; break;             //  'Mudanzas-particulares-y-empresas-Cantabria',
+          switch(currentId){ 
+              case infoPages.listWorkDetail[0] : objInfo = infoPages.infoPages[0] ; break;             
               case infoPages.listWorkDetail[1] : objInfo = infoPages.infoPages[1] ; break;
               case infoPages.listWorkDetail[2] : objInfo = infoPages.infoPages[2] ; break;
               case infoPages.listWorkDetail[3] : objInfo = infoPages.infoPages[3] ; break;  

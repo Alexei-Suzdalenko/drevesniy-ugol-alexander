@@ -11,7 +11,7 @@
      border-radius: 70% 30% 30% 70%/70% 70% 30% 30%;
    }
 .h1-large{
-     color: #0092FF; 
+     color: #FB582D; 
    }
 .images_details{
     border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
@@ -29,7 +29,7 @@
     margin-left: 4px; margin-right: 4px; font-size: 11px; line-height: 10px; float: left;
 }
 .list_cities:hover, .card-title:hover{
-    color:#0092FF; 
+    color:#FB582D; 
 } 
 .list_map_site{
     font-size: 21px!Important; text-decoration: none; 

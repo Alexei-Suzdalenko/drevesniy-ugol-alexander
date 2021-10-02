@@ -21,7 +21,7 @@ export default{
                   if(sc.type == 'application/ld+json') sc.remove();
                 }
 
-            let titlePage = 'Centro Mudanzas Reto';
+            let titlePage = 'Древесный Уголь';
             let currentHref = window.location.pathname;
             if(currentHref != '/'){
                 let otherTitle = currentHref.split('/');
@@ -44,7 +44,7 @@ export default{
              document.querySelector('head').appendChild(elScript);
         },
         insertValuesData(){
-            let titlePage = 'Mudanzas Reto';
+            let titlePage = 'Древесный Уголь';
             let currentHref = window.location.pathname;
             if(currentHref != '/'){
                 let otherTitle = currentHref.split('/');
@@ -63,30 +63,30 @@ export default{
                  "@type": "RadioStation",
                  "image": [
                         {   "@type": "ImageObject",
-                            "url": "https://mudanzasreto.com/chema/mudanzas-reto.png"
+                            "url": "https://drevesniy-ugol.web.app/chema/mudanzas-reto.png"
                         },{
                             "@type": "ImageObject",
-                            "url": "https://mudanzasreto.com/chema/mudanzas-reto165.png",
+                            "url": "https://drevesniy-ugol.web.app/chema/mudanzas-reto165.png",
                             "width": 165,
                             "height": 165
                         },{
                             "@type": "ImageObject",
-                            "url": "https://mudanzasreto.com/chema/mudanzas-reto130.png",
+                            "url": "https://drevesniy-ugol.web.app/chema/mudanzas-reto130.png",
                             "width": 130,
                             "height": 130
                         },{
                             "@type": "ImageObject",
-                            "url": "https://mudanzasreto.com/chema/mudanzas-reto100.png",
+                            "url": "https://drevesniy-ugol.web.app/chema/mudanzas-reto100.png",
                             "width": 100,
                             "height": 100
                         },{
                             "@type": "ImageObject",
-                            "url": "https://mudanzasreto.com/chema/mudanzas-reto80.png",
+                            "url": "https://drevesniy-ugol.web.app/chema/mudanzas-reto80.png",
                             "width": 80,
                             "height": 80
                         },{
                             "@type": "ImageObject",
-                            "url": "https://mudanzasreto.com/chema/mudanzas-reto63.png",
+                            "url": "https://drevesniy-ugol.web.app/chema/mudanzas-reto63.png",
                             "width": 63,
                             "height": 63
                         }
