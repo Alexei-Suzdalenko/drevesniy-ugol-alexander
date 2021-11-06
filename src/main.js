@@ -19,14 +19,6 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 createApp(App).use(store).use(router).mount('#app');
 
-// drevesniy.ugol@gmail.com svoboda2019svoboda2019         // firebase alexei.saron@gmail.com
-// https://drevesniy-ugol.000webhostapp.com/
-// https://drevesniy-ugol.web.app
-// google drevesniy.ugol@gmail.com  svoboda2019svoboda2019 // 000webhost
-// host: files.000webhost.com, username: drevesniy-ugol, password: ...
-
-// https://technext.github.io/yavin/index.html#header 
-// https://technext.github.io/nubis/index.html
 
 
 
